@@ -1,6 +1,6 @@
 import React from 'react';
-import exploreDamascusHistoryImage from '/Users/fadialsaidi/Desktop/Project2/be_damas1/src/images/explor-damascus-hostory.jpeg';
-import learnTheArabicAlphabetImage from '/Users/fadialsaidi/Desktop/Project2/be_damas1/src/images/Learn the Arabic Alphabet.jpeg';
+import exploreDamascusHistoryImage from '/Users/fadialsaidi/Desktop/Project2/be_damas1/be_damas/src/images/explor-damascus-hostory.jpeg';
+import learnTheArabicAlphabetImage from '/Users/fadialsaidi/Desktop/Project2/be_damas1/be_damas/src/images/Learn the Arabic Alphabet.jpeg';
 
 
 const Home = () => {
