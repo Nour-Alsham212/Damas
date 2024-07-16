@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/be-damascus/static/css/main.225a6a21.chunk.css",
+    "main.js": "/be-damascus/static/js/main.a3d71937.chunk.js",
+    "main.js.map": "/be-damascus/static/js/main.a3d71937.chunk.js.map",
+    "runtime-main.js": "/be-damascus/static/js/runtime-main.6249dd28.js",
+    "runtime-main.js.map": "/be-damascus/static/js/runtime-main.6249dd28.js.map",
+    "static/css/2.1d291595.chunk.css": "/be-damascus/static/css/2.1d291595.chunk.css",
+    "static/js/2.b4a693b4.chunk.js": "/be-damascus/static/js/2.b4a693b4.chunk.js",
+    "static/js/2.b4a693b4.chunk.js.map": "/be-damascus/static/js/2.b4a693b4.chunk.js.map",
+    "index.html": "/be-damascus/index.html",
+    "precache-manifest.67d8f42b892ef4d580c2308ca900957c.js": "/be-damascus/precache-manifest.67d8f42b892ef4d580c2308ca900957c.js",
+    "service-worker.js": "/be-damascus/service-worker.js",
+    "static/css/2.1d291595.chunk.css.map": "/be-damascus/static/css/2.1d291595.chunk.css.map",
+    "static/css/main.225a6a21.chunk.css.map": "/be-damascus/static/css/main.225a6a21.chunk.css.map",
+    "static/js/2.b4a693b4.chunk.js.LICENSE.txt": "/be-damascus/static/js/2.b4a693b4.chunk.js.LICENSE.txt",
+    "static/media/Learn the Arabic Alphabet.jpeg": "/be-damascus/static/media/Learn the Arabic Alphabet.532d5c3d.jpeg",
+    "static/media/bootstrap-icons.css": "/be-damascus/static/media/bootstrap-icons.cc1e5eda.woff2",
+    "static/media/all.min.css": "/be-damascus/static/media/fa-v4compatibility.fdb652dc.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6249dd28.js",
+    "static/css/2.1d291595.chunk.css",
+    "static/js/2.b4a693b4.chunk.js",
+    "static/css/main.225a6a21.chunk.css",
+    "static/js/main.a3d71937.chunk.js"
+  ]
+}
