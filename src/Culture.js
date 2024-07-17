@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHistory, faBook, faGlobe, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Tooltip } from 'react-tooltip';
 
 const Culture = () => {
   const [filters, setFilters] = useState({
@@ -29,11 +32,13 @@ const Culture = () => {
   };
 
   const clearFilters = () => {
-    setFilters({
-      history: false,
-      literature: false,
-      customs: false,
-    });
+    if (window.confirm('Are you sure you want to clear all filters?')) {
+      setFilters({
+        history: false,
+        literature: false,
+        customs: false,
+      });
+    }
   };
 
   const filteredContent = content.filter((item) => {
@@ -61,36 +66,50 @@ const Culture = () => {
         </div>
         <div className="filter-section">
           <h2>Filters</h2>
-          <button onClick={clearFilters}>Clear Filters</button>
+          <button onClick={clearFilters} data-tooltip-id="clear-filters-tooltip">
+            <FontAwesomeIcon icon={faTimes} /> Clear Filters
+          </button>
+          <Tooltip id="clear-filters-tooltip" place="top" effect="solid">
+            Clear all filters
+          </Tooltip>
           <div>
-            <label>
+            <label data-tooltip-id="history-tooltip">
               <input
                 type="checkbox"
                 checked={filters.history}
                 onChange={() => handleFilterChange('history')}
               />
-              History
+              <FontAwesomeIcon icon={faHistory} /> History
             </label>
+            <Tooltip id="history-tooltip" place="right" effect="solid">
+              Filter by history
+            </Tooltip>
           </div>
           <div>
-            <label>
+            <label data-tooltip-id="literature-tooltip">
               <input
                 type="checkbox"
                 checked={filters.literature}
                 onChange={() => handleFilterChange('literature')}
               />
-              Literature
+              <FontAwesomeIcon icon={faBook} /> Literature
             </label>
+            <Tooltip id="literature-tooltip" place="right" effect="solid">
+              Filter by literature
+            </Tooltip>
           </div>
           <div>
-            <label>
+            <label data-tooltip-id="customs-tooltip">
               <input
                 type="checkbox"
                 checked={filters.customs}
                 onChange={() => handleFilterChange('customs')}
               />
-              Customs
+              <FontAwesomeIcon icon={faGlobe} /> Customs
             </label>
+            <Tooltip id="customs-tooltip" place="right" effect="solid">
+              Filter by customs
+            </Tooltip>
           </div>
         </div>
       </div>

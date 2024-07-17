@@ -1,5 +1,6 @@
 {
   "name": "be-damas",
+  "homepage": "https://Nour-Alsham212.github.io/damascus",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,14 +13,21 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "i18next": "^23.12.1",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
+    "react-i18next": "^14.1.3",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
+    "react-tooltip": "^5.27.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
     "gh-pages": "^6.1.1"
   }
 }

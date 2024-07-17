@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-
+import { Tooltip } from 'react-tooltip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import './index.css';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
@@ -42,8 +45,17 @@ const Chatbot = () => {
           onChange={(e) => setInput(e.target.value)}
           className="chatbot-input"
           placeholder="Type a message..."
+          data-tooltip-id="input-tooltip"
         />
-        <button type="submit" className="chatbot-send-button">Send</button>
+        <Tooltip id="input-tooltip" place="top" effect="solid">
+          Type your message here
+        </Tooltip>
+        <button type="submit" className="chatbot-send-button" data-tooltip-id="send-tooltip">
+          <FontAwesomeIcon icon={faPaperPlane} /> Send
+        </button>
+        <Tooltip id="send-tooltip" place="top" effect="solid">
+          Click to send your message
+        </Tooltip>
       </form>
     </div>
   );
