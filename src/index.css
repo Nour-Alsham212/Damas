@@ -122,7 +122,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
-  height: 450px; /* Ensure both feature items have the same height */
+  height: 450px; 
   max-width: 45%;
   box-sizing: border-box;
 }
@@ -131,9 +131,8 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  flex-grow: 1; /* Allow the image to grow within the item */
+  flex-grow: 1; 
 }
-
 
 .feature-item h5 {
   font-size: 20px;
@@ -157,38 +156,61 @@ body {
   align-self: stretch;
   display: flex;
   justify-content: center;
+  width: 70; 
+  max-width: 400px;
+  padding: 20px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
 }
 
 .card {
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: var(--white-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  width: 100%;
-  margin: 0 auto;
+  width: 100%; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 20px; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: var(--white-color); 
+  box-shadow: none; 
+  text-align: left; 
+  align-items: center;
 }
 
 .card h4 {
   margin-bottom: 15px;
+  color: var(--primary-color); 
 }
 
-.card p {
-  margin: 10px 0;
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
   display: flex;
   align-items: center;
+  margin: 10px 0;
+  padding: 5px 0; 
+  border-bottom: 1px solid var(--primary-color); 
 }
 
-.icon {
+.day-icon, .clock-icon {
   margin-right: 10px;
+  color: var(--primary-color); 
 }
 
-.arrow-icon::before {
-  content: '➡️';
+.day {
+  flex-grow: 1;
+  text-align: left;
+  font-weight: bold; 
+  color: var(--white-color); 
 }
 
+.hours {
+  text-align: right;
+  color: var(--white-color); 
+}
 /* Language switcher styles */
 .language-switcher {
   display: flex;
@@ -1026,10 +1048,6 @@ input[type="checkbox"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.forum-thread button:hover {
-  background-color: #c0392b;
 }
 
 .create-thread { 

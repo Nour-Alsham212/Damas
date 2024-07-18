@@ -4,6 +4,8 @@ import i18n from './i18n';
 import exploreDamascusHistoryImage from './images/explor-damascus-hostory.jpeg';
 import learnTheArabicAlphabetImage from './images/Learn the Arabic Alphabet.jpeg';
 import { Tooltip } from 'react-tooltip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faCalendarDay } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -17,14 +19,28 @@ const Home = () => {
     localStorage.setItem('visited', 'true');
   }
 
+  const operatingHours = [
+    { day: t('Monday'), hours: '8:00AM - 8:00PM' },
+    { day: t('Tuesday'), hours: '8:00AM - 8:00PM' },
+    { day: t('Wednesday'), hours: '8:00AM - 8:00PM' },
+    { day: t('Thursday'), hours: '8:00AM - 8:00PM' },
+    { day: t('Friday'), hours: '8:00AM - 8:00PM' },
+    { day: t('Saturday'), hours: '10:00AM - 6:00PM' },
+    { day: t('Sunday'), hours: t('Closed') },
+  ];
+
   return (
     <div className="Home">
       <div className="language-switcher">
-        <button onClick={() => changeLanguage('en')} data-tooltip-id="en-tooltip">English</button>
+        <button onClick={() => changeLanguage('en')} data-tooltip-id="en-tooltip" aria-label="Change language to English">
+          English
+        </button>
         <Tooltip id="en-tooltip" place="top" effect="solid">
           Change language to English
         </Tooltip>
-        <button onClick={() => changeLanguage('ar')} data-tooltip-id="ar-tooltip">Arabic</button>
+        <button onClick={() => changeLanguage('ar')} data-tooltip-id="ar-tooltip" aria-label="Change language to Arabic">
+          Arabic
+        </button>
         <Tooltip id="ar-tooltip" place="top" effect="solid">
           Change language to Arabic
         </Tooltip>
@@ -58,13 +74,16 @@ const Home = () => {
       <div className="operating-hours-card" data-tooltip-id="operating-hours-tooltip">
         <div className="card">
           <h4>{t('Operating Hours')}</h4>
-          <p>{t('Monday')} <i className="icon arrow-icon"></i> 8:00AM-8:00PM</p>
-          <p>{t('Tuesday')} <i className="icon arrow-icon"></i> 8:00AM-8:00PM</p>
-          <p>{t('Wednesday')} <i className="icon arrow-icon"></i> 8:00AM-8:00PM</p>
-          <p>{t('Thursday')} <i className="icon arrow-icon"></i> 8:00AM-8:00PM</p>
-          <p>{t('Friday')} <i className="icon arrow-icon"></i> 8:00AM-8:00PM</p>
-          <p>{t('Saturday')} <i className="icon arrow-icon"></i> 10:00AM-6:00PM</p>
-          <p>{t('Sunday')} <i className="icon arrow-icon"></i> {t('Closed')}</p>
+          <ul>
+            {operatingHours.map((item, index) => (
+              <li key={index}>
+                <FontAwesomeIcon icon={faCalendarDay} className="day-icon" aria-hidden="true" />
+                <span className="day">{item.day}</span>
+                <FontAwesomeIcon icon={faClock} className="clock-icon" aria-hidden="true" />
+                <span className="hours">{item.hours}</span>
+              </li>
+            ))}
+          </ul>
         </div>
         <Tooltip id="operating-hours-tooltip" place="top" effect="solid">
           Check our operating hours
