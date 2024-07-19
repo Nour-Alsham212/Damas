@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faPlusCircle, faEdit, faSave, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faPlusCircle, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from 'react-tooltip';
 import './index.css';
 
