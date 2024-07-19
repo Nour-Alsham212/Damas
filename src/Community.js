@@ -63,27 +63,39 @@ const Community = () => {
           </div>
         </div>
         <div className="forum-section">
-          <h2><FontAwesomeIcon icon={faEdit} /> Forum: General Discussion</h2>
-          <div className="forum-thread">
-            <h3>Thread: Introduce Yourself</h3>
-            <p><strong>Description:</strong> Share a bit about yourself</p>
-            <a href="#" role="button" className="view-profile-btn" aria-label="Learn more about the user" data-tooltip-id="view-profile-introduce-tooltip">
-              View Profile
-            </a>
-            <Tooltip id="view-profile-introduce-tooltip" place="top" effect="solid">
-              Learn more about the user
-            </Tooltip>
-          </div>
-          <div className="forum-thread">
-            <h3>Thread: Favorite Arabic Phrases</h3>
-            <p><strong>Description:</strong> Discuss your favorite phrases</p>
-            <a href="#" role="button" className="view-profile-btn" aria-label="Learn more about the user" data-tooltip-id="view-profile-phrases-tooltip">
-              View Profile
-            </a>
-            <Tooltip id="view-profile-phrases-tooltip" place="top" effect="solid">
-              Learn more about the user
-            </Tooltip>
-          </div>
+    <h2><FontAwesomeIcon icon={faEdit} /> Forum: General Discussion</h2>
+    <div className="forum-thread">
+      <h3>Thread: Introduce Yourself</h3>
+      <p><strong>Description:</strong> Share a bit about yourself</p>
+      <button
+        onClick={() => {/* handle click event */}}
+        className="view-profile-btn"
+        aria-label="Learn more about the user"
+        data-tooltip-id="view-profile-introduce-tooltip"
+        style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
+      >
+        View Profile
+      </button>
+      <Tooltip id="view-profile-introduce-tooltip" place="top" effect="solid">
+        Learn more about the user
+      </Tooltip>
+    </div>
+    <div className="forum-thread">
+      <h3>Thread: Favorite Arabic Phrases</h3>
+      <p><strong>Description:</strong> Discuss your favorite phrases</p>
+      <button
+        onClick={() => {/* handle click event */}}
+        className="view-profile-btn"
+        aria-label="Learn more about the user"
+        data-tooltip-id="view-profile-phrases-tooltip"
+        style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
+      >
+        View Profile
+      </button>
+      <Tooltip id="view-profile-phrases-tooltip" place="top" effect="solid">
+        Learn more about the user
+      </Tooltip>
+    </div>
           <button className="create-thread-btn" data-tooltip-id="create-thread-tooltip">
             <FontAwesomeIcon icon={faEdit} /> Create New Thread
           </button>
